@@ -1,4 +1,4 @@
-# API em NodeJS com Typescript
+# API em NodeJS com TypeScript
 
 Projeto elaborado com as tecnologias:
 - NodeJS
