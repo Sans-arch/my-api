@@ -1,9 +1,11 @@
+import { AppError } from '@shared/errors/AppError';
 import { Router } from 'express';
 
-const router = Router();
+const routes = Router();
 
-router.get('/', (request, response) => {
+routes.get('/', (request, response) => {
+  throw new AppError('Acesso negado');
   return response.json({ message: 'Olá Dev!' });
 });
 
-export { router };
+export { routes };
