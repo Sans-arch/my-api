@@ -1,8 +1,10 @@
 import { Router } from 'express';
 import { RolesRepository } from '@roles/repositories/RolesRepository';
+import { CreateRoleController } from '@roles/useCases/createRole/CreateRoleController';
 
 const rolesRouter = Router();
 const repository = new RolesRepository();
+const createRolesController = new CreateRoleController();
 
 rolesRouter.get('/', (request, response) => {
   const roles = repository.findAll();
@@ -22,16 +24,7 @@ rolesRouter.get('/:id', (request, response) => {
 });
 
 rolesRouter.post('/', (request, response) => {
-  const { name } = request.body;
-  const roleAlreadyExists = repository.findByName(name);
-
-  if (roleAlreadyExists) {
-    return response.status(400).json({ error: 'Role already exists!' });
-  }
-
-  const role = repository.create({ name });
-
-  return response.status(201).json(role);
+  return createRolesController.handle(request, response);
 });
 
 export { rolesRouter };
