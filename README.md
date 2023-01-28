@@ -18,3 +18,6 @@ tudo o que for tangível a manipulação de informações não deve ser feito pe
 - Use Cases: são estruturas utilizadas para centralizar a checagem de regras de negócio, no qual irão trabalhar em conjunto com os Controllers,
 os controllers irão repassar os dados da rota para os Use Cases e os Use Cases irão trabalhar diretamente com os Repositórios e fazer toda
 a verificação de regras de negócio, deixando para o Controller apenas a tarefa de retornar a Response de uma Request.
+
+Design Patterns utilizados no projeto:
+- Singleton
