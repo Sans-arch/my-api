@@ -5,6 +5,7 @@ Projeto elaborado com as tecnologias:
 - TypeScript
 - ExpressJS
 - TypeORM
+- SQLite
 - Swagger
 
 Estrutura de pastas:
