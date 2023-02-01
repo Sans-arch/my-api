@@ -9,9 +9,6 @@ class Role {
     if (!this.id) {
       this.id = uuidv4();
     }
-
-    // this.name = name;
-    // this.created_at = new Date();
   }
 }
 
